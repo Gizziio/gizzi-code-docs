@@ -1,97 +1,30 @@
 {
-  "$schema": "https://json.schemastore.org/package.json",
-  "name": "@allternit/sdk",
-  "version": "1.2.10",
+  "name": "gizzi-code-docs",
+  "private": true,
+  "version": "1.0.0",
   "type": "module",
-  "license": "MIT",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./client": {
-      "import": "./dist/gen/client.js",
-      "types": "./dist/gen/client.d.ts"
-    },
-    "./server": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./tools": {
-      "import": "./dist/tools.js",
-      "types": "./dist/tools.d.ts"
-    },
-    "./computer-use": {
-      "import": "./dist/computer-use.js",
-      "types": "./dist/computer-use.d.ts"
-    },
-    "./ai-runtime": {
-      "import": "./dist/ai-runtime.js",
-      "types": "./dist/ai-runtime.d.ts"
-    },
-    "./harness": {
-      "import": "./dist/harness/index.js",
-      "types": "./dist/harness/index.d.ts"
-    },
-    "./providers": {
-      "import": "./dist/providers/registry.js",
-      "types": "./dist/providers/registry.d.ts"
-    },
-    "./providers/anthropic": {
-      "import": "./dist/providers/anthropic/index.js",
-      "types": "./dist/providers/anthropic/index.d.ts"
-    },
-    "./providers/openai": {
-      "import": "./dist/providers/openai/index.js",
-      "types": "./dist/providers/openai/index.d.ts"
-    },
-    "./providers/google": {
-      "import": "./dist/providers/google/index.js",
-      "types": "./dist/providers/google/index.d.ts"
-    },
-    "./providers/ollama": {
-      "import": "./dist/providers/ollama/index.js",
-      "types": "./dist/providers/ollama/index.d.ts"
-    },
-    "./providers/mistral": {
-      "import": "./dist/providers/mistral/index.js",
-      "types": "./dist/providers/mistral/index.d.ts"
-    },
-    "./providers/cohere": {
-      "import": "./dist/providers/cohere/index.js",
-      "types": "./dist/providers/cohere/index.d.ts"
-    },
-    "./providers/groq": {
-      "import": "./dist/providers/groq/index.js",
-      "types": "./dist/providers/groq/index.d.ts"
-    },
-    "./providers/together": {
-      "import": "./dist/providers/together/index.js",
-      "types": "./dist/providers/together/index.d.ts"
-    },
-    "./providers/azure": {
-      "import": "./dist/providers/azure/index.js",
-      "types": "./dist/providers/azure/index.d.ts"
-    },
-    "./providers/bedrock": {
-      "import": "./dist/providers/bedrock/index.js",
-      "types": "./dist/providers/bedrock/index.d.ts"
-    },
-    "./acp": {
-      "import": "./dist/acp/index.js",
-      "types": "./dist/acp/index.d.ts"
-    },
-    "./meta": {
-      "import": "./dist/meta.js",
-      "types": "./dist/meta.d.ts"
-    }
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "index-search": "pagefind --site dist --output-path dist/pagefind",
+    "build:search": "npm run build && npm run index-search",
+    "preview": "vite preview"
   },
-  "files": [
-    "dist",
-    "src",
-    "docs-ai-runtime",
-    "examples-ai-runtime",
-    "tsconfig.ai-runtime.json",
-    "README-meta.md"
-  ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "lucide-react": "^0.344.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.0",
+    "pagefind": "^1.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.1.0"
+  }
 }
