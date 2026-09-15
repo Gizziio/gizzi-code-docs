@@ -35,7 +35,7 @@ npm run dev
 ## Warnings
 
 - Keep this site focused on Gizzi Code only. Platform docs belong in `allternit-docs`.
-- The `dist/` folder is committed for easy static hosting; rebuild after content changes.
+- The `dist/` folder is build output and is no longer committed; run `npm run build` for static hosting.
 
 ## Related Repos
 
